@@ -220,6 +220,10 @@ function! racer#GoToDefinition()
     call delete(tmpfname)
 endfunction
 
+function! racer#CloseAndGoBack()
+    exec ':Bclose'
+endfunction
+
 function! s:RacerGetBufferContents(base)
     " Re-combine the completion base word from omnicomplete with the current
     " line contents. Since the base word gets remove from the buffer before
